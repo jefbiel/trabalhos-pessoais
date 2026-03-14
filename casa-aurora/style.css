@@ -519,6 +519,23 @@ main {
   transition: background 220ms ease;
 }
 
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.social-label {
+  line-height: 1;
+}
+
 .footer-socials a:hover,
 .footer-contacts a:hover {
   background: rgba(179, 82, 52, 0.95);
