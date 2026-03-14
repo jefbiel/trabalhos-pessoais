@@ -1,4 +1,5 @@
 :root {
+  /* Cores principais usadas no site */
   --bg: #f7efe1;
   --bg-soft: #fff9ee;
   --text: #2f1f1a;
@@ -18,6 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Configuração geral do corpo da página */
 body {
   margin: 0;
   font-family: 'Sora', sans-serif;
@@ -43,6 +45,7 @@ p {
   line-height: 1.7;
 }
 
+/* Cabeçalho com imagem de fundo */
 .site-header {
   min-height: 92vh;
   padding: 6.4rem 5vw 4rem;
@@ -68,6 +71,7 @@ p {
   filter: saturate(0.75) contrast(1.05);
 }
 
+/* Barra de navegação fixa */
 .nav-shell {
   width: min(1150px, 92vw);
   margin: 0;
@@ -94,6 +98,7 @@ p {
   padding: 0.78rem 1.05rem;
 }
 
+/* Logo do restaurante */
 .logo {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.9rem;
@@ -108,6 +113,7 @@ p {
   transform: translateY(-1px);
 }
 
+/* Links do menu */
 .nav-links {
   list-style: none;
   margin: 0;
@@ -152,6 +158,7 @@ p {
   color: #ffe6c8;
 }
 
+/* Botão do menu mobile */
 .menu-toggle {
   display: none;
   margin-left: auto;
@@ -169,6 +176,7 @@ p {
   background: rgba(255, 255, 255, 0.18);
 }
 
+/* Botões principais do site */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -202,6 +210,7 @@ p {
   box-shadow: 0 8px 18px rgba(47, 59, 28, 0.34);
 }
 
+/* Parte principal do topo */
 .hero {
   max-width: 790px;
   margin: 14vh auto 0;
@@ -236,6 +245,7 @@ p {
   flex-wrap: wrap;
 }
 
+/* Área principal do conteúdo */
 main {
   max-width: 1150px;
   margin: 0 auto;
@@ -258,6 +268,7 @@ main {
   font-size: clamp(2rem, 5vw, 2.9rem);
 }
 
+/* Grid das especialidades */
 .menu-grid {
   margin-top: 1.6rem;
   display: grid;
@@ -304,6 +315,7 @@ main {
   color: var(--olive);
 }
 
+/* Bloco da seção nossa história */
 .section-highlight {
   padding: 2rem;
   border-radius: 28px;
@@ -340,6 +352,7 @@ main {
   font-size: 1.4rem;
 }
 
+/* Formulário de reserva */
 .booking-form {
   margin-top: 1.5rem;
   padding: 1.3rem;
@@ -391,6 +404,7 @@ main {
   font-size: 0.92rem;
 }
 
+/* Parte da localização com mapa */
 .location-layout {
   margin-top: 1.5rem;
   display: grid;
@@ -452,6 +466,7 @@ main {
   background: rgba(179, 82, 52, 0.95);
 }
 
+/* Bloco de contatos */
 .contacts-grid {
   margin-top: 1.5rem;
   display: grid;
@@ -486,6 +501,7 @@ main {
   text-decoration: underline;
 }
 
+/* Rodapé */
 .site-footer {
   text-align: center;
   padding: 2rem 1rem 2.7rem;
@@ -498,6 +514,7 @@ main {
   margin-top: 0.35rem;
 }
 
+/* Área das redes sociais e contatos no rodapé */
 .footer-socials,
 .footer-contacts {
   margin-top: 0.9rem;
@@ -511,6 +528,7 @@ main {
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1.25rem;
 }
 
 .footer-contacts {
@@ -542,8 +560,8 @@ main {
 }
 
 .social-icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   fill: currentColor;
   flex: 0 0 auto;
 }
@@ -560,6 +578,7 @@ main {
   transform: translateY(-1px);
 }
 
+/* Animação simples para revelar as seções */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
@@ -571,6 +590,7 @@ main {
   transform: translateY(0);
 }
 
+/* Ajustes para telas médias */
 @media (max-width: 1024px) {
   .hero {
     max-width: 680px;
@@ -586,6 +606,7 @@ main {
   }
 }
 
+/* Ajustes gerais para tablet e telas menores */
 @media (max-width: 860px) {
   .site-header {
     min-height: auto;
@@ -662,6 +683,7 @@ main {
   }
 }
 
+/* Ajustes do mobile */
 @media (max-width: 600px) {
   .site-header {
     padding: 5.1rem 4vw 2.5rem;
@@ -730,14 +752,16 @@ main {
   }
 
   .footer-socials {
-    grid-template-columns: repeat(3, 72px);
+    /* Aqui os tres icones ficam lado a lado no celular */
+    grid-template-columns: repeat(3, 60px);
     justify-content: center;
-    gap: 0.7rem;
+    gap: 0.55rem;
   }
 
   .footer-socials a {
-    width: 72px;
-    height: 72px;
+    /* Tamanho dos circulos no celular */
+    width: 40px;
+    height: 40px;
     padding: 0;
     border-radius: 999px;
     justify-self: center;
@@ -745,13 +769,15 @@ main {
 
   .social-link {
     justify-content: center;
-    min-height: 72px;
+    /* Isso ajuda o icone a continuar centralizado */
+    min-height: 40px;
     gap: 0;
   }
 
   .social-icon {
-    width: 22px;
-    height: 22px;
+    /* Tamanho do desenho do icone */
+    width: 18px;
+    height: 18px;
   }
 
   .social-label {
@@ -775,15 +801,17 @@ main {
   }
 }
 
+/* Ajuste extra para celulares bem pequenos */
 @media (max-width: 380px) {
   .footer-socials {
-    grid-template-columns: repeat(3, 64px);
-    gap: 0.5rem;
+    /* Versao mais compacta para telas menores */
+    grid-template-columns: repeat(3, 54px);
+    gap: 0.4rem;
   }
 
   .footer-socials a {
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
   }
 }
 

@@ -1,3 +1,4 @@
+// Aqui eu pego os elementos principais que vou usar no JavaScript.
 const navLinks = document.getElementById("navLinks");
 const menuToggle = document.getElementById("menuToggle");
 const reservaForm = document.getElementById("reservaForm");
@@ -8,11 +9,13 @@ const navShell = document.querySelector(".nav-shell");
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 const sections = document.querySelectorAll("section[id], header[id]");
 
+// Fecha o menu do mobile quando precisar.
 function closeMenu() {
   navLinks.classList.remove("show");
   menuToggle.setAttribute("aria-expanded", "false");
 }
 
+// Abre e fecha o menu do mobile.
 function toggleMenu() {
   navLinks.classList.toggle("show");
   const expanded = navLinks.classList.contains("show");
@@ -21,6 +24,7 @@ function toggleMenu() {
 
 menuToggle.addEventListener("click", toggleMenu);
 
+// Muda o visual do header quando a página desce um pouco.
 function updateHeaderState() {
   if (!navShell) {
     return;
@@ -32,12 +36,14 @@ function updateHeaderState() {
 window.addEventListener("scroll", updateHeaderState, { passive: true });
 updateHeaderState();
 
+// Quando clicar em um link do menu, ele fecha no mobile.
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     closeMenu();
   });
 });
 
+// Se clicar fora do menu aberto no mobile, ele fecha.
 document.addEventListener("click", (event) => {
   if (!navLinks.classList.contains("show")) {
     return;
@@ -49,16 +55,19 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// Se voltar para o tamanho de desktop, o menu mobile é fechado.
 window.addEventListener("resize", () => {
   if (window.innerWidth > 860) {
     closeMenu();
   }
 });
 
+// Coloca o ano atual automaticamente no rodapé.
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+// Faz uma simulação simples de envio do formulário.
 if (reservaForm) {
   reservaForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -67,6 +76,7 @@ if (reservaForm) {
   });
 }
 
+// Esse observer serve para mostrar os blocos aos poucos quando aparecem na tela.
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries, obs) => {
@@ -85,6 +95,7 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("visible"));
 }
 
+// Aqui eu marco no menu qual seção está visível no momento.
 if ("IntersectionObserver" in window && navAnchors.length > 0) {
   const sectionObserver = new IntersectionObserver(
     (entries) => {
