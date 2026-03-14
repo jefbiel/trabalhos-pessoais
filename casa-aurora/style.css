@@ -47,9 +47,11 @@ p {
 
 /* Cabeçalho com imagem de fundo */
 .site-header {
-  min-height: 92vh;
-  padding: 6.4rem 5vw 4rem;
+  min-height: 108vh;
+  padding: 6.4rem 5vw 7rem;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 
 .site-header::before {
@@ -212,9 +214,16 @@ p {
 
 /* Parte principal do topo */
 .hero {
-  max-width: 790px;
-  margin: 14vh auto 0;
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto 1.2rem;
   color: #fff;
+}
+
+.hero > * {
+  max-width: 790px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .hero-kicker {
@@ -593,8 +602,8 @@ main {
 /* Ajustes para telas médias */
 @media (max-width: 1024px) {
   .hero {
-    max-width: 680px;
-    margin-top: 12vh;
+    max-width: 1150px;
+    margin: 0 auto 1rem;
   }
 
   .hero-text {
@@ -610,7 +619,7 @@ main {
 @media (max-width: 860px) {
   .site-header {
     min-height: auto;
-    padding: 5.8rem 5vw 3.4rem;
+    padding: 5.8rem 5vw 4.2rem;
   }
 
   .nav-shell {
@@ -657,7 +666,7 @@ main {
   }
 
   .hero {
-    margin-top: 9vh;
+    margin: 0 auto 0.8rem;
   }
 
   .hero h1 {
@@ -686,7 +695,8 @@ main {
 /* Ajustes do mobile */
 @media (max-width: 600px) {
   .site-header {
-    padding: 5.1rem 4vw 2.5rem;
+    min-height: 96vh;
+    padding: 5.1rem 4vw 3.2rem;
   }
 
   .nav-shell {
@@ -695,7 +705,7 @@ main {
   }
 
   .hero {
-    margin-top: 8.2vh;
+    margin: 0 auto 0.6rem;
   }
 
   .hero-actions {
