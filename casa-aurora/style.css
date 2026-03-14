@@ -222,7 +222,7 @@ p {
 
 .hero > * {
   max-width: 790px;
-  margin-left: 0;
+  margin-left: max(5vw, calc((100vw - 1150px) / 2 + 5vw));
   margin-right: auto;
 }
 
@@ -706,6 +706,10 @@ main {
 
   .hero {
     margin: 0 auto 0.6rem;
+  }
+
+  .hero > * {
+    margin-left: 4vw;
   }
 
   .hero-actions {
