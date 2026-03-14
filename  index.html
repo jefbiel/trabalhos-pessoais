@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Aurora – Cozinha Artesanal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header" id="home">
+    <nav class="nav-shell">
+      <a href="#home" class="logo" aria-label="Voltar ao início">Casa Aurora</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#experiencia">Nossa história</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a href="#contatos">Contatos</a></li>
+      </ul>
+      <a href="#reservas" class="btn btn-nav">Reservar</a>
+    </nav>
+
+    <section class="hero reveal">
+      <p class="hero-kicker">Culinária artesanal em cada detalhe</p>
+      <h1>Sabores autorais para noites memoráveis</h1>
+      <p class="hero-text">Ingredientes frescos, carta de vinhos selecionada e um ambiente intimista para transformar seu jantar em experiência.</p>
+      <div class="hero-actions">
+        <a href="#especialidades" class="btn">Ver Especialidades</a>
+        <a href="#reservas" class="btn btn-ghost">Reservar Mesa</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="especialidades" class="section reveal">
+      <div class="section-title">
+        <p>Especialidades da casa</p>
+        <h2>O que torna a Casa Aurora única</h2>
+      </div>
+      <div class="menu-grid">
+        <article class="card">
+          <h3>Brasa Lenta</h3>
+          <p>Cortes selecionados preparados em fogo controlado para realçar sabor, suculência e textura.</p>
+          <strong>Técnica assinatura</strong>
+        </article>
+        <article class="card">
+          <h3>Ingredientes Sazonais</h3>
+          <p>Cardápio vivo com produtos da estação, vindos de produtores locais e pequenas fazendas.</p>
+          <strong>Frescor garantido</strong>
+        </article>
+        <article class="card">
+          <h3>Harmonização Guiada</h3>
+          <p>Nossa equipe sugere vinhos e coquetéis autorais para acompanhar cada etapa da refeição.</p>
+          <strong>Experiência completa</strong>
+        </article>
+        <article class="card">
+          <h3>Cozinha Autoral</h3>
+          <p>Receitas exclusivas da Casa Aurora, equilibrando tradição, criatividade e apresentação elegante.</p>
+          <strong>Sabor memorável</strong>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section section-highlight reveal">
+      <div>
+        <p>Nossa história</p>
+        <h2>Uma trajetória construída em torno da boa mesa</h2>
+      </div>
+      <div class="highlight-grid">
+        <div>
+          <h3>Origem Familiar</h3>
+          <p>A Casa Aurora nasceu de receitas de família, passadas por gerações e reinterpretadas com cuidado.</p>
+        </div>
+        <div>
+          <h3>Evolução da Cozinha</h3>
+          <p>Com o tempo, unimos tradição e técnica contemporânea para criar uma identidade autoral.</p>
+        </div>
+        <div>
+          <h3>Compromisso com a Comunidade</h3>
+          <p>Valorizamos produtores locais e recebemos cada cliente como convidado especial em nossa casa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservas" class="section reveal">
+      <div class="section-title">
+        <p>Garanta seu lugar</p>
+        <h2>Reserve sua mesa em poucos passos</h2>
+      </div>
+      <form id="reservaForm" class="booking-form">
+        <label>
+          Nome
+          <input type="text" placeholder="Seu nome" required>
+        </label>
+        <label>
+          Email
+          <input type="email" placeholder="voce@email.com" required>
+        </label>
+        <label>
+          Telefone
+          <input type="tel" placeholder="(11) 99999-9999" required>
+        </label>
+        <div class="form-row">
+          <label>
+            Data
+            <input type="date" required>
+          </label>
+          <label>
+            Horário
+            <input type="time" required>
+          </label>
+        </div>
+        <label>
+          Pessoas
+          <input type="number" min="1" placeholder="Número de pessoas" required>
+        </label>
+        <label>
+          Observações
+          <textarea placeholder="Alguma preferência especial?"></textarea>
+        </label>
+        <button type="submit" class="btn">Confirmar Reserva</button>
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="localizacao" class="section reveal">
+      <div class="section-title">
+        <p>Como chegar</p>
+        <h2>Visite a Casa Aurora</h2>
+      </div>
+      <div class="location-layout">
+        <div class="location-info">
+          <h3>Endereço</h3>
+          <p>Rua das Acácias, 128</p>
+          <p>Jardins, São Paulo - SP</p>
+          <p>Aberto de terça a domingo, das 18h às 23h30.</p>
+        </div>
+        <div class="map-link" aria-label="Mapa da localização da Casa Aurora">
+          <iframe
+            title="Mapa da localização da Casa Aurora"
+            src="https://maps.google.com/maps?q=Rua%20das%20Acacias%2C%20128%20Jardins%20Sao%20Paulo%20SP&z=15&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <a
+          class="map-open-link"
+          href="https://www.google.com/maps/search/?api=1&query=Rua+das+Acacias+128+Jardins+Sao+Paulo+SP"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir endereço da Casa Aurora no Google Maps"
+        >Abrir no Google Maps</a>
+      </div>
+    </section>
+
+    <section id="contatos" class="section reveal">
+      <div class="section-title">
+        <p>Fale com a gente</p>
+        <h2>Contatos da Casa Aurora</h2>
+      </div>
+      <div class="contacts-grid">
+        <article class="contact-card">
+          <h3>Telefone</h3>
+          <p><a href="tel:+551132345678">(11) 3234-5678</a></p>
+          <p>Atendimento de terça a domingo, das 14h às 23h.</p>
+        </article>
+        <article class="contact-card">
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">(11) 99999-9999</a></p>
+          <p>Reservas, eventos e dúvidas rápidas.</p>
+        </article>
+        <article class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:contato@casaaurora.com.br">contato@casaaurora.com.br</a></p>
+          <p>Retorno em até 24 horas úteis.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Casa Aurora • Cozinha Artesanal</p>
+    <p>Rua das Acácias, 128 • São Paulo</p>
+    <div class="footer-socials" aria-label="Redes sociais da Casa Aurora">
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+    <div class="footer-contacts">
+      <a href="tel:+551132345678">(11) 3234-5678</a>
+      <a href="mailto:contato@casaaurora.com.br">contato@casaaurora.com.br</a>
+    </div>
+    <p>&copy; <span id="currentYear"></span> Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
